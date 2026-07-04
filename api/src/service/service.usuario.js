@@ -2,14 +2,13 @@ import bcrypt from "bcrypt";
 import jwt from "../token.js";
 import repoUsuario from "../repositories/repository.usuario.js";
 
-
 async function Inserir(nome, email, senha) {
   const hashSenha = await bcrypt.hash(senha, 10);
   const usuario = await repoUsuario.Inserir(nome, email, hashSenha);
-  
+
   // Gera o token para o novo usuário criado e adiciona no objeto de retorno
   usuario.token = jwt.CreateJWT(usuario.id_usuario);
-  
+
   return usuario;
 }
 
