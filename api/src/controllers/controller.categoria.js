@@ -3,7 +3,7 @@ import serviceCategoria from "../service/service.categoria.js";
 async function Listar(req, res) {
   try {
     const categorias = await serviceCategoria.Listar(req.id_usuario);
-    res.status(201).json(categorias);
+    res.status(200).json(categorias);
   } catch (error) {
     res.status(500).json({ error: error.message });
   }
