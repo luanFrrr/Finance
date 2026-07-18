@@ -21,8 +21,7 @@ async function ListarByEmail(email) {
 async function ListarById(id_usuario) {
   let sql = `select * from usuario where id_usuario = ?`;
   const usuario = await query(sql, [id_usuario]);
-  
-  
+
   if (usuario.length === 0) {
     return [];
   } else {
@@ -35,7 +34,6 @@ async function Editar(id_usuario, nome, email) {
   await query(sql, [nome, email, id_usuario]);
 
   return { id_usuario: id_usuario };
-
 }
 
 async function Senha(id_usuario, senha) {
