@@ -1,0 +1,31 @@
+{
+  "expo": {
+    "name": "Finance",
+    "slug": "Finance",
+    "version": "1.0.0",
+    "orientation": "portrait",
+    "icon": "./src/assets/icon.png",
+    "userInterfaceStyle": "light",
+    "ios": {
+      "supportsTablet": true
+    },
+    "android": {
+      "adaptiveIcon": {
+        "backgroundColor": "#E6F4FE",
+        "foregroundImage": "./src/assets/icon.png",
+        "backgroundImage": "./src/assets/icon.png",
+        "monochromeImage": "./src/assets/icon.png"
+      },
+      "package": "com.luanfrrr.Finance"
+    },
+    "web": {
+      "favicon": "./src/assets/icon.png"
+    },
+    "extra": {
+      "eas": {
+        "projectId": "20756b71-6f64-4636-995c-09616e786248"
+      }
+    },
+    "plugins": ["expo-font"]
+  }
+}
