@@ -6,35 +6,11 @@ import CreateAccount from "../screens/create-account/create-account.jsx";
 const Stack = createNativeStackNavigator();
 function RoutesOpen() {
   return (
-    <>
-      <Stack.Navigator>
-        <Stack.Screen
-          name="Onboarding"
-          component={Onboarding}
-          options={{
-            headerShown: false,
-          }}
-        />
-      </Stack.Navigator>
-      <Stack.Navigator>
-        <Stack.Screen
-          name="login"
-          component={Login}
-          options={{
-            headerShown: false,
-          }}
-        />
-      </Stack.Navigator>
-      <Stack.Navigator>
-        <Stack.Screen
-          name="createAccount"
-          component={CreateAccount}
-          options={{
-            headerShown: false,
-          }}
-        />
-      </Stack.Navigator>
-    </>
+    <Stack.Navigator screenOptions={{ headerShown: false }}>
+      <Stack.Screen name="Onboarding" component={Onboarding} />
+      <Stack.Screen name="Login" component={Login} />
+      <Stack.Screen name="CreateAccount" component={CreateAccount} />
+    </Stack.Navigator>
   );
 }
 

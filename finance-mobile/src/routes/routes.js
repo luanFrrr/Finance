@@ -1,8 +1,8 @@
-import RoutesOpen from "./routesOpen";
-import RoutesPrivate from "./routesPrivate";
+import RoutesOpen from "./routesOpen.js";
+import RoutesPrivate from "./routesPrivate.js";
 
 function Routes() {
-  return <RoutesOpen />;
+  return <RoutesPrivate />;
 }
 
 export default Routes;
