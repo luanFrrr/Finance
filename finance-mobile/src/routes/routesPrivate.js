@@ -2,11 +2,28 @@ import { COLORS } from "../constants/theme.js";
 import { createNativeStackNavigator } from "@react-navigation/native-stack";
 import Home from "../screens/home/home.jsx";
 import Lancamentos from "../screens/lancamentos/lancamentos.jsx";
+import Categorias from "../screens/categorias/categorias.jsx";
 
 const Stack = createNativeStackNavigator();
 function RoutesPrivate() {
   return (
     <Stack.Navigator>
+      <Stack.Screen
+        name="Home"
+        component={Home}
+        options={{ headerShown: false }}
+      />
+      <Stack.Screen
+        name="Categorias"
+        component={Categorias}
+        options={{
+          headerTitle: "Categorias",
+          headerTitleAlign: "center",
+          headerShadowVisible: false,
+          headerTintColor: COLORS.primary4,
+        }}
+      />
+
       <Stack.Screen
         name="Lancamentos"
         component={Lancamentos}
@@ -16,11 +33,6 @@ function RoutesPrivate() {
           headerShadowVisible: false,
           headerTintColor: COLORS.primary4,
         }}
-      />
-      <Stack.Screen
-        name="Home"
-        component={Home}
-        options={{ headerShown: false }}
       />
     </Stack.Navigator>
   );

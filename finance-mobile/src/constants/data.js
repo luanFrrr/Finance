@@ -44,3 +44,36 @@ export const lancamentos = [
     icone: "https://picsum.photos/50/50",
   },
 ];
+
+export const categorias = [
+  {
+    id_categoria: 1,
+    id_usuario: 1,
+    categoria: "Alimentação",
+    icone: "https://picsum.photos/50/50",
+  },
+  {
+    id_categoria: 2,
+    id_usuario: 1,
+    categoria: "Viagens",
+    icone: "https://picsum.photos/50/50",
+  },
+  {
+    id_categoria: 3,
+    id_usuario: 1,
+    categoria: "Transporte",
+    icone: "https://picsum.photos/50/50",
+  },
+  {
+    id_categoria: 4,
+    id_usuario: 1,
+    categoria: "Educação",
+    icone: "https://picsum.photos/50/50",
+  },
+  {
+    id_categoria: 5,
+    id_usuario: 1,
+    categoria: "Saúde",
+    icone: "https://picsum.photos/50/50",
+  },
+];

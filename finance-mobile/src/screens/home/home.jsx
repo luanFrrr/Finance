@@ -6,15 +6,30 @@ import { lancamentos } from "../../constants/data.js";
 import Lancamento from "../../components/lancamento/lancamento.jsx";
 import Modal from "react-native-modal";
 
-function Home() {
+function Home(props) {
   const [showMenu, setShowMenu] = useState(false);
-  function Add() {}
+  function Add() {
+    props.navigation.navigate("Lancamentos");
+  }
   function handleShowMenu() {
     setShowMenu(!showMenu);
   }
   function ClickDesconectar() {
     setShowMenu(false);
   }
+  function ClickCategorias() {
+    setShowMenu(false);
+    props.navigation.navigate("Categorias");
+  }
+  function ClickLancamentos() {
+    setShowMenu(false);
+    props.navigation.navigate("Lancamentos");
+  }
+  function ClickPerfil() {
+    setShowMenu(false);
+    props.navigation.navigate("Perfil");
+  }
+
   return (
     <View style={styles.container}>
       <Modal
@@ -28,16 +43,25 @@ function Home() {
           <Image style={styles.logoMenu} source={icons.logo} />
 
           <View>
-            <TouchableOpacity style={styles.itemMenu}>
+            <TouchableOpacity
+              style={styles.itemMenu}
+              onPress={ClickLancamentos}
+            >
               <Text style={styles.textMenu}>Lançamentos</Text>
             </TouchableOpacity>
-            <TouchableOpacity style={styles.itemMenu}>
+            <TouchableOpacity style={styles.itemMenu} onPress={ClickCategorias}>
               <Text style={styles.textMenu}>Categorias</Text>
             </TouchableOpacity>
-            <TouchableOpacity style={styles.itemMenu}>
+            <TouchableOpacity
+              style={styles.itemMenu}
+              onPress={() => props.navigation.navigate("Perfil")}
+            >
               <Text style={styles.textMenu}>Meu Perfil</Text>
             </TouchableOpacity>
-            <TouchableOpacity style={styles.itemMenu}>
+            <TouchableOpacity
+              style={styles.itemMenu}
+              onPress={() => props.navigation.navigate("AlterarSenha")}
+            >
               <Text style={styles.textMenu}>Alterar Senha</Text>
             </TouchableOpacity>
           </View>
