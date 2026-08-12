@@ -52,10 +52,7 @@ function Home(props) {
             <TouchableOpacity style={styles.itemMenu} onPress={ClickCategorias}>
               <Text style={styles.textMenu}>Categorias</Text>
             </TouchableOpacity>
-            <TouchableOpacity
-              style={styles.itemMenu}
-              onPress={() => props.navigation.navigate("Perfil")}
-            >
+            <TouchableOpacity style={styles.itemMenu} onPress={ClickPerfil}>
               <Text style={styles.textMenu}>Meu Perfil</Text>
             </TouchableOpacity>
             <TouchableOpacity
