@@ -1,11 +1,11 @@
 import { COLORS } from "../constants/theme.js";
 import { createNativeStackNavigator } from "@react-navigation/native-stack";
+
 import Home from "../screens/home/home.jsx";
 import Lancamentos from "../screens/lancamentos/lancamentos.jsx";
 import Categorias from "../screens/categorias/categorias.jsx";
 import Perfil from "../screens/perfil/perfil.jsx";
-import icons from "../constants/icons.js";
-import { Image, TouchableOpacity } from "react-native";
+import Password from "../screens/password/password.jsx";
 
 const Stack = createNativeStackNavigator();
 function RoutesPrivate() {
@@ -43,6 +43,16 @@ function RoutesPrivate() {
         component={Perfil}
         options={{
           headerTitle: "Editar Perfil",
+          headerTitleAlign: "center",
+          headerShadowVisible: false,
+          headerTintColor: COLORS.primary4,
+        }}
+      />
+      <Stack.Screen
+        name="Password"
+        component={Password}
+        options={{
+          headerTitle: "Editar Senha",
           headerTitleAlign: "center",
           headerShadowVisible: false,
           headerTintColor: COLORS.primary4,

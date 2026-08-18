@@ -29,6 +29,10 @@ function Home(props) {
     setShowMenu(false);
     props.navigation.navigate("Perfil");
   }
+  function ClickPassword() {
+    setShowMenu(false);
+    props.navigation.navigate("Password");
+  }
 
   return (
     <View style={styles.container}>
@@ -55,10 +59,7 @@ function Home(props) {
             <TouchableOpacity style={styles.itemMenu} onPress={ClickPerfil}>
               <Text style={styles.textMenu}>Meu Perfil</Text>
             </TouchableOpacity>
-            <TouchableOpacity
-              style={styles.itemMenu}
-              onPress={() => props.navigation.navigate("AlterarSenha")}
-            >
+            <TouchableOpacity style={styles.itemMenu} onPress={ClickPassword}>
               <Text style={styles.textMenu}>Alterar Senha</Text>
             </TouchableOpacity>
           </View>
